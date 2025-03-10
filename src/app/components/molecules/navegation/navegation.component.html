@@ -1,0 +1,13 @@
+<nav [class]="className()">
+      <ul [class]="className()">
+            @for (url of urls(); track $index) {
+                  <li>
+                        <url
+                              [href]="url.url"
+                              [value]="url.title"
+                              [className]="classNameUrl()"
+                        />
+                  </li>
+            }
+      </ul>
+</nav>

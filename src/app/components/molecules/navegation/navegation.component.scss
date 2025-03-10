@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+ul {
+        @apply size-full;
+}
+
+li {
+        @apply flex size-full;
+}
+
+url {
+        @apply size-full flex transition-all;
+
+        &:hover {
+                @apply bg-gray-700;
+        }
+}
