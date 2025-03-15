@@ -3,48 +3,66 @@
 @use "tailwindcss";
 @import "tailwindcss";
 
-
 html,
 body {
-        @apply bg-white text-gray-900;
+      @apply bg-white text-gray-900;
 
-        @media (prefers-color-scheme: dark) {
-                color-scheme: dark;
-                @apply bg-gradient-to-r from-[#0a050c] to-[#040022] text-gray-200;
-        }
+      @media (prefers-color-scheme: dark) {
+            color-scheme: dark;
+            @apply bg-gradient-to-r from-[#0a050c] to-[#040022] text-gray-200;
+      }
 }
 
-
 @layer utilities {
-        [page] {
-                @apply w-[100vw] h-[100vh]
-        }
+      [page] {
+            @apply w-[100vw] h-[100vh];
+      }
 
-        .gradient {
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                color: transparent;
-        }
-
+      .gradient {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+      }
 }
 
 @keyframes text-gradient-animation {
-        0% {
-                background-position: 0 0;
-        }
+      0% {
+            background-position: 0 0;
+      }
 
-        100% {
-                background-position: -100% 0;
-        }
+      100% {
+            background-position: -100% 0;
+      }
 }
 
 @font-face {
-        font-family: 'lexend';
-        src: url('https://fonts.googleapis.com/css2?family=Lexend&display=swap') format('truetype');
+      font-family: "lexend";
+      src: url("https://fonts.googleapis.com/css2?family=Lexend&display=swap")
+            format("truetype");
 }
 
 @font-face {
-        font-family: 'poppins';
-        src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap') format('truetype');
+      font-family: "poppins";
+      src: url("https://fonts.googleapis.com/css2?family=Poppins&display=swap")
+            format("truetype");
+}
+@font-face {
+      font-family: "CabinSketch-Bold";
+      src: url("assets/fonts/CabinSketch-Bold.ttf");
+}
+
+@font-face {
+      font-family: "CabinSketch";
+      src: url("assets/fonts/CabinSketch-Regular.ttf");
+}
+
+@font-face {
+      font-family: "KonkhmerSleokchher";
+      src: url("assets/fonts/KonkhmerSleokchher-Regular.ttf");
+}
+
+@font-face {
+      font-family: "RubikDoodleShadow";
+      src: url("assets/fonts/RubikDoodleShadow-Regular.ttf");
 }
