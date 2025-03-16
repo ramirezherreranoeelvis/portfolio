@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ProyectsTemplateComponent } from '../components/templates/proyects-template/proyects-template.component';
 
 @Component({
-  selector: 'proyects-template',
+  selector: 'proyects',
   imports: [ProyectsTemplateComponent],
   template: '<proyects-template/>',
 })
