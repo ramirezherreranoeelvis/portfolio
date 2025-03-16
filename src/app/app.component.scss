@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+h1 {
+      @apply font-[RubikDoodleShadow] text-7xl font-bold;
+      background-image: linear-gradient(
+            270deg,
+            #0004ff,
+            #ff006f 25%,
+            #3700ff 50%,
+            #ff006f 75%,
+            #3700ff 90%
+      );
+      background-size: 200% 100%;
+      animation: text-gradient-animation 6s ease-in-out infinite;
+}
