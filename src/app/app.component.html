@@ -1,13 +1,16 @@
-<section page class="">
-      <header class="">
-            <h1 class="gradient text-center">Ramírez Herrera Noé Elvis</h1>
+<section page>
+      <header>
+            <h1 class="gradient">Ramírez Herrera Noé Elvis</h1>
       </header>
+      <navegation
+            [urls]="urls"
+            className="flex flex-col gap-[20px] px-[20px] w-[272px] h-[370px]"
+            classNameUrl="bg-[#a387f91a] flex justify-center items-center rounded-[40px]"
+      />
       <div class="content">
-            <navegation
-                  [urls]="urls"
-                  className="flex flex-row text-center"
-                  classNameUrl="text-xl font-[lexend] py-4"
-            />
-            <panel><router-outlet /></panel>
+            <router-outlet />
       </div>
+      <footer class="">
+            <p>2023 Ramírez Herrera Noé Elvis</p>
+      </footer>
 </section>

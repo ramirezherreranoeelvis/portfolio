@@ -1,17 +1,13 @@
 @import "tailwindcss";
 
 ul {
-        @apply size-full;
+      @apply size-full;
 }
 
 li {
-        @apply flex size-full;
+      @apply flex size-full;
 }
 
 url {
-        @apply size-full flex transition-all;
-
-        &:hover {
-                @apply bg-gray-700;
-        }
+      @apply inline-block size-full;
 }

@@ -11,17 +11,17 @@ export const routes: Routes = [
             data: { title: 'Sobre mi' },
       },
       {
-            path: '',
+            path: 'proyects',
             component: ProyectsComponent,
             data: { title: 'Proyectos' },
       },
       {
-            path: '',
+            path: 'skills',
             component: SkillsComponent,
             data: { title: 'habilidades' },
       },
       {
-            path: '',
+            path: 'resources',
             component: ResourcesComponent,
             data: { title: 'Recursos' },
       },

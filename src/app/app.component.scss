@@ -1,15 +1,45 @@
 @import "tailwindcss";
+[page] {
+      @apply grid;
+      grid-template-areas: "title title" "navegation content" "footer footer";
+      grid-template-rows: 1.2fr 7fr 1.5fr;
+      grid-template-columns: 300px 1fr;
+      header {
+            grid-area: title;
+      }
+      navegation {
+            grid-area: navegation;
+      }
+      .content {
+            grid-area: content;
+      }
+      footer {
+            grid-area: footer;
+      }
+}
+header {
+      @apply flex items-center justify-center;
+      h1 {
+            @apply font-[RubikDoodleShadow] text-7xl font-bold text-center;
+            background-image: linear-gradient(
+                  270deg,
+                  #0004ff,
+                  #ff006f 25%,
+                  #3700ff 50%,
+                  #ff006f 75%,
+                  #3700ff 90%
+            );
+            background-size: 200% 100%;
+            animation: text-gradient-animation 6s ease-in-out infinite;
+      }
+}
 
-h1 {
-      @apply font-[RubikDoodleShadow] text-7xl font-bold;
-      background-image: linear-gradient(
-            270deg,
-            #0004ff,
-            #ff006f 25%,
-            #3700ff 50%,
-            #ff006f 75%,
-            #3700ff 90%
-      );
-      background-size: 200% 100%;
-      animation: text-gradient-animation 6s ease-in-out infinite;
+navegation {
+      @apply flex justify-center items-center;
+}
+.content {
+}
+
+footer {
+      @apply bg-[#13121a];
 }
