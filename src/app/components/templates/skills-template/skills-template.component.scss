@@ -1,0 +1,99 @@
+.panel {
+      position: relative;
+      height: 535px;
+      width: 1325px;
+}
+img {
+      position: absolute;
+      /* angular */
+      &:nth-child(1) {
+            width: 71px;
+            height: 71px;
+            left: 103px;
+            top: 61px;
+      }
+      /* spring boot */
+      &:nth-child(2) {
+            width: 71px;
+            height: 71px;
+            left: 355px;
+            top: 61px;
+      }
+      /* react */
+      &:nth-child(3) {
+            width: 81px;
+            left: 610px;
+            top: 61px;
+      }
+      /* node */
+      &:nth-child(4) {
+            width: 71px;
+            left: 865px;
+            top: 61px;
+      }
+      /* mysql */
+      &:nth-child(5) {
+            width: 82px;
+            height: 82px;
+            left: 1144px;
+            top: 61px;
+      }
+      /* css */
+      &:nth-child(6) {
+            width: 71px;
+            height: 80px;
+            left: 220px;
+            top: 228px;
+      }
+      /* html */
+      &:nth-child(7) {
+            width: 71px;
+            height: 80px;
+            left: 490px;
+            top: 228px;
+      } /* java */
+      &:nth-child(8) {
+            width: 82px;
+            height: 82px;
+            left: 751px;
+            top: 217px;
+      }
+      /* mongo */
+      &:nth-child(9) {
+            height: 81px;
+            left: 1041px;
+            top: 217px;
+      }
+      /* nest */
+      &:nth-child(10) {
+            width: 71px;
+            height: 71px;
+            left: 103px;
+            top: 371px;
+      }
+      /* js */
+      &:nth-child(11) {
+            width: 71px;
+            left: 355px;
+            top: 371px;
+      }
+      /* sass */
+      &:nth-child(12) {
+            width: 71px;
+            left: 619px;
+            top: 371px;
+      }
+      /* ts */
+      &:nth-child(13) {
+            width: 71px;
+            left: 874px;
+            top: 371px;
+      }
+      /* SQLServer */
+      &:nth-child(14) {
+            width: 71px;
+            height: 79px;
+            left: 1155px;
+            top: 363px;
+      }
+}
