@@ -1,0 +1,15 @@
+.card {
+      @apply flex items-center justify-center gap-[74px] bg-cover relative rounded-[4px] overflow-hidden;
+      z-index: 10;
+      &::after {
+            content: "";
+            @apply absolute top-[0px] left-[0px] bg-[#040011bf] z-20 size-full;
+      }
+      a {
+            z-index: 30;
+            @apply text-[#ffffff] rounded-[100%] size-[50px] bg-[#0400118f] flex justify-center items-center;
+            i {
+                  @apply text-[50px];
+            }
+      }
+}

@@ -1,6 +1,22 @@
 <div class="size-full flex justify-center items-center">
-        <div class="panel margin">
-              <p>about-me-template works!</p>
-        </div>
-  </div>
-  
+      <div class="panel margin">
+            <div class="options"></div>
+            <div class="proyects">
+                  @let images =
+                        [
+                              "assets/images/proyects/proyecto1.png",
+                              "assets/images/proyects/proyecto2.png",
+                              "assets/images/proyects/proyecto3.jpg",
+                              "assets/images/proyects/proyecto4.png",
+                              "assets/images/proyects/proyecto5.png",
+                              "assets/images/proyects/proyecto6.png",
+                        ];
+                  @for (img of images; track $index) {
+                        <card-proyect
+                              className="w-[338px] h-[190px]"
+                              [imgUrl]="img"
+                        />
+                  }
+            </div>
+      </div>
+</div>
