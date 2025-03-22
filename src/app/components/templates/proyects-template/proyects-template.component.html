@@ -1,17 +1,17 @@
-<div class="size-full flex justify-center items-center">
-      <div class="panel margin">
-            <div class="options"></div>
+<div class="size-full flex items-center">
+      <div class="panel mx-10">
+            <div class="options">
+                  <img src="assets/images/skills/angular.ico" alt="angular" />
+                  <img
+                        src="assets/images/skills/spring_boot.png"
+                        alt="spring_boot"
+                  />
+                  <img src="assets/images/skills/react.png" alt="react" />
+                  <img src="assets/images/skills/node.png" alt="node" />
+                  <img src="assets/images/skills/bbdd.png" alt="mysql" />
+            </div>
             <div class="proyects">
-                  @let images =
-                        [
-                              "assets/images/proyects/proyecto1.png",
-                              "assets/images/proyects/proyecto2.png",
-                              "assets/images/proyects/proyecto3.jpg",
-                              "assets/images/proyects/proyecto4.png",
-                              "assets/images/proyects/proyecto5.png",
-                              "assets/images/proyects/proyecto6.png",
-                        ];
-                  @for (img of images; track $index) {
+                  @for (img of proyects; track $index) {
                         <card-proyect
                               className="w-[338px] h-[190px]"
                               [imgUrl]="img"

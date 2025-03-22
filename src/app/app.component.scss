@@ -2,13 +2,13 @@
 [page] {
       @apply grid;
       grid-template-areas: "title title" "navegation content" "footer footer";
-      grid-template-rows: 1.2fr 7fr 1.5fr;
-      grid-template-columns: .1fr 1fr;
+      grid-template-rows: 0.1fr 7fr 1.3fr;
+      grid-template-columns: 0.1fr 1fr;
       header {
             grid-area: title;
-            @apply flex items-center justify-center;
+            @apply flex items-end justify-center;
             h1 {
-                  @apply font-[RubikDoodleShadow] text-7xl font-bold text-center;
+                  @apply font-[RubikDoodleShadow] text-[120px] font-bold text-center;
                   background-image: linear-gradient(
                         270deg,
                         #0004ff,
@@ -19,6 +19,12 @@
                   );
                   background-size: 200% 100%;
                   animation: text-gradient-animation 6s ease-in-out infinite;
+                  @media (width<1664px) {
+                        @apply text-8xl;
+                  }
+                  @media (width<1334px) {
+                        @apply text-7xl;
+                  }
             }
       }
       navegation {
@@ -31,5 +37,19 @@
       footer {
             grid-area: footer;
             @apply bg-[#13121a];
+      }
+
+      @media (width<1000px) {
+            grid-template-areas: "title" "content" "footer";
+            grid-template-rows: 1fr 4.5fr 1fr;
+            grid-template-columns: 1fr;
+            navegation{
+                  @apply hidden;
+            }
+            header{
+                  h1{
+                        @apply text-[64px] max-w-[600px];
+                  }
+            }
       }
 }

@@ -1,0 +1,40 @@
+.panel {
+      @apply flex flex-col max-w-[1363px] max-h-[628px] overflow-y-auto py-[40px] gap-[30px];
+}
+.options {
+      @apply relative flex gap-[181px] justify-center;
+}
+.proyects {
+      @apply flex flex-wrap gap-x-[99px] gap-y-[48px] justify-center;
+}
+
+img {
+      /* angular */
+      &:nth-child(1) {
+            width: 71px;
+            height: 71px;
+      }
+
+      &:nth-child(2) {
+            width: 71px;
+            height: 71px;
+      }
+      /* react */
+      &:nth-child(3) {
+            height: 81px;
+      }
+      /* node */
+      &:nth-child(4) {
+            width: 71px;
+      }
+      /* mysql */
+      &:nth-child(5) {
+            width: 82px;
+            height: 82px;
+      }
+      /* css */
+      &:nth-child(6) {
+            width: 71px;
+            height: 80px;
+      }
+}
