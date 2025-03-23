@@ -8,21 +8,21 @@ export const routes: Routes = [
       {
             path: '',
             component: AboutMeComponent,
-            data: { title: 'Sobre mi' },
+            title: 'Sobre mi' ,
       },
       {
             path: 'proyects',
             component: ProyectsComponent,
-            data: { title: 'Proyectos' },
+            title: 'Proyectos',
       },
       {
             path: 'skills',
             component: SkillsComponent,
-            data: { title: 'habilidades' },
+             title: 'habilidades' ,
       },
       {
             path: 'resources',
             component: ResourcesComponent,
-            data: { title: 'Recursos' },
+             title: 'Recursos' ,
       },
 ];
