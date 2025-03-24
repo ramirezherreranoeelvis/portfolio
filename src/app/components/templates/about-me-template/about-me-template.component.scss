@@ -1,0 +1,38 @@
+@import "tailwindcss";
+.about {
+      @apply size-full flex items-center;
+      .panel {
+            @apply flex gap-28 items-center mx-24 px-12 py-14;
+            .pfp {
+                  @apply w-[382.38px];
+                  img {
+                        @apply rounded-full;
+                  }
+            }
+            .text {
+                  @apply font-[CabinSketch] text-4xl w-[589px];
+            }
+      }
+      @media (width<1000px) {
+            .panel {
+                  @apply flex-col gap-[39px] m-auto max-w-[630px];
+                  .pfp {
+                        @apply max-w-[253px];
+                  }
+                  .text {
+                        @apply text-2xl w-full text-center;
+                  }
+            }
+      }
+      @media (width<740px) {
+            .panel {
+                  @apply flex-col gap-[39px] mx-[40px];
+                  .pfp {
+                        @apply max-w-[200px];
+                  }
+                  .text {
+                        @apply text-xl;
+                  }
+            }
+      }
+}

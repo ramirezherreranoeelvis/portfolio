@@ -8,7 +8,7 @@ export const routes: Routes = [
       {
             path: '',
             component: AboutMeComponent,
-            title: 'Sobre mi' ,
+            title: 'Sobre mi',
       },
       {
             path: 'proyects',
@@ -18,11 +18,11 @@ export const routes: Routes = [
       {
             path: 'skills',
             component: SkillsComponent,
-             title: 'habilidades' ,
+            title: 'habilidades',
       },
       {
             path: 'resources',
             component: ResourcesComponent,
-             title: 'Recursos' ,
+            title: 'Recursos',
       },
 ];

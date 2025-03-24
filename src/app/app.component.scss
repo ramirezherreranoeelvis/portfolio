@@ -27,6 +27,9 @@
                   }
             }
       }
+      hamburger-menu {
+            @apply hidden;
+      }
       navegation {
             grid-area: navegation;
             @apply flex justify-center items-center;
@@ -43,12 +46,48 @@
             grid-template-areas: "title" "content" "footer";
             grid-template-rows: 1fr 4.5fr 1fr;
             grid-template-columns: 1fr;
-            navegation{
+            hamburger-menu {
+                  @apply inline-block fixed left-2.5 top-2.5 scale-75;
+            }
+            navegation {
                   @apply hidden;
             }
-            header{
-                  h1{
+            header {
+                  h1 {
                         @apply text-[64px] max-w-[600px];
+                  }
+            }
+      }
+      @media (width<780px) {
+            hamburger-menu {
+                  @apply scale-50;
+            }
+            header {
+                  h1 {
+                        @apply text-[50px] max-w-[550px];
+                  }
+            }
+      }
+
+      @media (width<740px) {
+            grid-template-rows: .8fr 5fr .8fr;
+            hamburger-menu {
+                  @apply scale-[.4];
+            }
+            header {
+                  h1 {
+                        @apply text-[35px] max-w-[400px];
+                  }
+            }
+      }
+      @media (width<500px) {
+            grid-template-rows: .8fr 5fr .8fr;
+            hamburger-menu {
+                  @apply scale-[.3];
+            }
+            header {
+                  h1 {
+                        @apply text-[25px] max-w-[240px];
                   }
             }
       }

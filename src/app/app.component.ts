@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavegationComponent } from './components/molecules/navegation/navegation.component';
 import { IUrl } from './components/molecules/navegation/url';
+import { HamburgerMenuComponent } from "./components/atoms/hamburger-menu/hamburger-menu.component";
 
 @Component({
       selector: 'app-root',
-      imports: [RouterOutlet, NavegationComponent],
+      imports: [RouterOutlet, NavegationComponent, HamburgerMenuComponent],
       templateUrl: './app.component.html',
       styleUrl: './app.component.scss',
 })
