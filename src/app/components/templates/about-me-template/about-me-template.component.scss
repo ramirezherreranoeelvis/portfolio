@@ -10,10 +10,10 @@
                   }
             }
             .text {
-                  @apply font-[CabinSketch] text-4xl w-[589px];
+                  @apply font-[CabinSketch] text-4xl w-[589px] text-center;
             }
       }
-      @media (width<1000px) {
+      @media (width<=1000px) {
             .panel {
                   @apply flex-col gap-[39px] m-auto max-w-[630px];
                   .pfp {
@@ -24,9 +24,27 @@
                   }
             }
       }
-      @media (0<width<740px) {
+      @media (width<1450px) and (height>768px) {
             .panel {
-                  @apply flex-col gap-[39px] mx-[40px];
+                  @apply flex-col gap-16 m-auto px-10 py-30 box-content;
+                  .pfp {
+                        @apply max-w-[250px];
+                  }
+            }
+      }
+
+      @media (width<740px) and (height>768px) {
+            .panel {
+                  @apply flex-col gap-7 m-[30px] px-6 py-10;
+                  .pfp {
+                        @apply max-w-[150px];
+                  }
+            }
+      }
+
+      @media (width<768px) {
+            .panel {
+                  @apply flex-col gap-[30px] mx-[40px];
                   .pfp {
                         @apply max-w-[200px];
                   }
@@ -35,11 +53,27 @@
                   }
             }
       }
-      @media (height>768px) and (width<1450px) {
+
+      @media (width>1000px) and (height<=600px) {
             .panel {
-                  @apply flex-col gap-5 m-auto;
+                  @apply gap-5 px-3;
                   .pfp {
-                        @apply max-w-[190px];
+                        @apply max-w-[180px];
+                  }
+                  .text {
+                        @apply text-2xl w-[380px] text-center;
+                  }
+            }
+      }
+
+      @media (width<376px) and (height<741px) {
+            .panel {
+                  @apply flex-col gap-5 mx-[30px] px-6 py-10;
+                  .pfp {
+                        @apply max-w-[140px];
+                  }
+                  .text {
+                        @apply text-lg;
                   }
             }
       }
