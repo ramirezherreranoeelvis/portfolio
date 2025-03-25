@@ -2,13 +2,14 @@
 [page] {
       @apply grid;
       grid-template-areas: "title title" "navegation content" "footer footer";
-      grid-template-rows: 0.1fr 7fr 1.3fr;
+      grid-template-rows: 1.3fr 7fr 1.3fr;
       grid-template-columns: 0.1fr 1fr;
       header {
             grid-area: title;
-            @apply flex items-end justify-center;
+            @apply flex items-end justify-center overflow-hidden;
             h1 {
                   @apply font-[RubikDoodleShadow] text-[120px] font-bold text-center;
+                  line-height: 1;
                   background-image: linear-gradient(
                         270deg,
                         #0004ff,
@@ -19,12 +20,6 @@
                   );
                   background-size: 200% 100%;
                   animation: text-gradient-animation 6s ease-in-out infinite;
-                  @media (width<1664px) {
-                        @apply text-8xl;
-                  }
-                  @media (width<1334px) {
-                        @apply text-7xl;
-                  }
             }
       }
       hamburger-menu {
@@ -41,7 +36,22 @@
             grid-area: footer;
             @apply bg-[#13121a];
       }
-
+      @media (width<1664px) {
+            grid-template-rows: .8fr 4.5fr 1fr;
+            header {
+                  h1 {
+                        @apply text-8xl;
+                  }
+            }
+      }
+      @media (width<1334px) {
+            grid-template-rows: .6fr 4.5fr 1fr;
+            header {
+                  h1 {
+                        @apply text-7xl;
+                  }
+            }
+      }
       @media (width<1000px) {
             grid-template-areas: "title" "content" "footer";
             grid-template-rows: 1fr 4.5fr 1fr;
@@ -59,6 +69,7 @@
             }
       }
       @media (width<780px) {
+            grid-template-rows: 0.8fr 5fr 0.8fr;
             hamburger-menu {
                   @apply scale-50;
             }
@@ -70,7 +81,7 @@
       }
 
       @media (width<740px) {
-            grid-template-rows: .8fr 5fr .8fr;
+            grid-template-rows: 0.6fr 5fr 0.8fr;
             hamburger-menu {
                   @apply scale-[.4];
             }
@@ -81,7 +92,7 @@
             }
       }
       @media (width<500px) {
-            grid-template-rows: .8fr 5fr .8fr;
+            grid-template-rows: 0.4fr 5fr 0.8fr;
             hamburger-menu {
                   @apply scale-[.3];
             }

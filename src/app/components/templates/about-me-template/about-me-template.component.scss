@@ -24,7 +24,7 @@
                   }
             }
       }
-      @media (width<740px) {
+      @media (0<width<740px) {
             .panel {
                   @apply flex-col gap-[39px] mx-[40px];
                   .pfp {
@@ -32,6 +32,14 @@
                   }
                   .text {
                         @apply text-xl;
+                  }
+            }
+      }
+      @media (height>768px) and (width<1450px) {
+            .panel {
+                  @apply flex-col gap-5 m-auto;
+                  .pfp {
+                        @apply max-w-[190px];
                   }
             }
       }
