@@ -1,18 +1,7 @@
 <div class="size-full flex items-center">
       <div class="panel">
-            <img src="assets/images/skills/angular.ico" alt="angular" />
-            <img src="assets/images/skills/spring_boot.png" alt="spring_boot" />
-            <img src="assets/images/skills/react.png" alt="react" />
-            <img src="assets/images/skills/node.png" alt="node" />
-            <img src="assets/images/skills/MySQL.png" alt="mysql" />
-            <img src="assets/images/skills/css.png" alt="css" />
-            <img src="assets/images/skills/html.png" alt="html" />
-            <img src="assets/images/skills/java.png" alt="java" />
-            <img src="assets/images/skills/mongodb.png" alt="mongodb" />
-            <img src="assets/images/skills/nest.png" alt="nest" />
-            <img src="assets/images/skills/js.png" alt="javascript" />
-            <img src="assets/images/skills/sass.png" alt="sass" />
-            <img src="assets/images/skills/ts.png" alt="typescript" />
-            <img src="assets/images/skills/SQLServer.png" alt="SQLServer" />
+            @for (routeImage of routesImages; track $index) {
+                  <img [src]="routeImage.src" [alt]="routeImage.alt" />
+            }
       </div>
 </div>
