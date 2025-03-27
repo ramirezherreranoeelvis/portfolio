@@ -6,6 +6,9 @@ import {
       transition,
       trigger,
 } from '@angular/animations';
+/**
+ * @param {EventEmitter} clickMenu - event click
+ */
 @Component({
       selector: 'hamburger-menu',
       template: `

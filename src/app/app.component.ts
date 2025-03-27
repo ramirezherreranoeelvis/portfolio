@@ -4,6 +4,7 @@ import { NavegationComponent } from './components/molecules/navegation/navegatio
 import { IUrl } from './components/molecules/navegation/url';
 import { HamburgerMenuComponent } from './components/atoms/hamburger-menu/hamburger-menu.component';
 import { NavegationModalComponent } from './components/molecules/modals/navegation-modal/navegation-modal.component';
+import { AIconComponent } from './components/atoms/a-icon/a-icon.component';
 
 @Component({
       selector: 'app-root',
@@ -12,6 +13,7 @@ import { NavegationModalComponent } from './components/molecules/modals/navegati
             NavegationComponent,
             HamburgerMenuComponent,
             NavegationModalComponent,
+            AIconComponent,
       ],
       templateUrl: './app.component.html',
       styleUrl: './app.component.scss',

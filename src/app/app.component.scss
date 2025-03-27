@@ -37,7 +37,14 @@
       }
       footer {
             grid-area: footer;
-            @apply bg-[#13121a];
+            @apply flex justify-center items-center flex-col gap-4;
+            @apply bg-[#13121a] text-sky-50;
+            .contact {
+                  @apply flex gap-6;
+            }
+            a-icon {
+                  @apply inline-block bg-amber-50 text-[black] rounded-full px-[10px] text-[30px];
+            }
       }
       @media (width<1664px) {
             grid-template-rows: 0.8fr 4.5fr 1fr;

@@ -7,6 +7,7 @@
             <h1 class="gradient">Ramírez Herrera Noé Elvis</h1>
       </header>
       <navegation
+            class=""
             [urls]="urls"
             className="flex flex-col gap-[20px] px-[20px] w-[272px] h-[370px]"
             classNameUrl="bg-[#a387f91a] flex justify-center items-center rounded-[40px]"
@@ -15,6 +16,20 @@
             <router-outlet />
       </div>
       <footer>
-            <p>2023 Ramírez Herrera Noé Elvis</p>
+            <div class="contact">
+                  <a-icon
+                        href="https://github.com/ramirezherreranoeelvis"
+                        classIcon="bi bi-github"
+                  />
+                  <a-icon
+                        href="https://www.linkedin.com/in/noe-elvis-ramirez-herrera/"
+                        classIcon="bi bi-linkedin"
+                  />
+                  <a-icon
+                        href="mailto: ramirezherreranoeelvis@gmail.com"
+                        classIcon="bi bi-envelope"
+                  />
+            </div>
+            <p>Creado por Ramírez Herrera Noé Elvis (2023) ©</p>
       </footer>
 </section>
