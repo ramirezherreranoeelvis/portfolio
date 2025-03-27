@@ -1,5 +1,8 @@
 <section page>
-      <hamburger-menu/>
+      <hamburger-menu (clickMenu)="openModal()" />
+      <div #modalNavegation class="navegation-modal">
+            <navegation-modal [urls]="urls" />
+      </div>
       <header>
             <h1 class="gradient">Ramírez Herrera Noé Elvis</h1>
       </header>

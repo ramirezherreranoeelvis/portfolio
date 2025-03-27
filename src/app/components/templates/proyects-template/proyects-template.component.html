@@ -12,11 +12,7 @@
             </div>
             <div class="proyects">
                   @for (img of proyects; track $index) {
-                        <card-proyect
-                              className="w-[338px] h-[190px]"
-                              [imgUrl]="img"
-                              
-                        />
+                        <card-proyect [imgUrl]="img" />
                   }
             </div>
       </div>

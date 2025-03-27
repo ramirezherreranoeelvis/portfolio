@@ -9,7 +9,7 @@ body {
 
       @media (prefers-color-scheme: dark) {
             color-scheme: dark;
-            @apply bg-gradient-to-r from-[#0a050c] to-[#040022] text-gray-200 bg-amber-800;
+            @apply bg-gradient-to-r from-[#0a050c] to-[#040022] text-gray-200;
       }
 }
 

@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, viewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavegationComponent } from './components/molecules/navegation/navegation.component';
 import { IUrl } from './components/molecules/navegation/url';
-import { HamburgerMenuComponent } from "./components/atoms/hamburger-menu/hamburger-menu.component";
+import { HamburgerMenuComponent } from './components/atoms/hamburger-menu/hamburger-menu.component';
+import { NavegationModalComponent } from './components/molecules/modals/navegation-modal/navegation-modal.component';
 
 @Component({
       selector: 'app-root',
-      imports: [RouterOutlet, NavegationComponent, HamburgerMenuComponent],
+      imports: [
+            RouterOutlet,
+            NavegationComponent,
+            HamburgerMenuComponent,
+            NavegationModalComponent,
+      ],
       templateUrl: './app.component.html',
       styleUrl: './app.component.scss',
 })
@@ -22,4 +28,15 @@ export class AppComponent {
                   isExternal: true,
             },
       ];
+      protected menu = viewChild.required<ElementRef>('modalNavegation');
+
+      openModal() {
+            const menuHtmlClassList = this.menu().nativeElement.classList;
+
+            if (menuHtmlClassList.contains('active')) {
+                  menuHtmlClassList.remove('active');
+            } else {
+                  menuHtmlClassList.add('active');
+            }
+      }
 }

@@ -4,38 +4,38 @@
 .options {
       @apply relative flex justify-center;
 }
+
 .proyects {
       @apply flex flex-wrap gap-x-[99px] gap-y-[48px] justify-center;
+      card-proyect {
+            @apply w-[338px] h-[190px];
+      }
+      @media (width<1590px) {
+            @apply gap-x-[50px];
+      }
+      @media (width<1190px) {
+            card-proyect {
+                  @apply w-[308px] h-[160px];
+            }
+      }
+      @media (width<1000px) {
+            @apply gap-x-[25px] gap-y-[20px];
+            card-proyect {
+                  @apply w-[248px] h-[100px];
+            }
+      }
+      @media (width<880px) {
+            @apply gap-x-[80px] gap-y-[40px];
+            card-proyect {
+                  @apply w-[288px] h-[140px];
+            }
+      }
 }
 
 img {
       margin: auto;
-      /* angular */
-      &:nth-child(1) {
-            width: 71px;
-            height: 71px;
-      }
-
-      &:nth-child(2) {
-            width: 71px;
-            height: 71px;
-      }
-      /* react */
-      &:nth-child(3) {
-            height: 81px;
-      }
-      /* node */
-      &:nth-child(4) {
-            width: 71px;
-      }
-      /* mysql */
-      &:nth-child(5) {
-            width: 82px;
-            height: 82px;
-      }
-      /* css */
-      &:nth-child(6) {
-            width: 71px;
-            height: 80px;
+      @apply h-[71px];
+      @media (width<1000px) {
+            @apply h-[61px];
       }
 }

@@ -25,6 +25,9 @@
       hamburger-menu {
             @apply hidden;
       }
+      .navegation-modal {
+            @apply hidden;
+      }
       navegation {
             grid-area: navegation;
             @apply flex justify-center items-center;
@@ -37,7 +40,7 @@
             @apply bg-[#13121a];
       }
       @media (width<1664px) {
-            grid-template-rows: .8fr 4.5fr 1fr;
+            grid-template-rows: 0.8fr 4.5fr 1fr;
             header {
                   h1 {
                         @apply text-8xl;
@@ -45,7 +48,7 @@
             }
       }
       @media (width<1334px) {
-            grid-template-rows: .6fr 4.5fr 1fr;
+            grid-template-rows: 0.6fr 4.5fr 1fr;
             header {
                   h1 {
                         @apply text-7xl;
@@ -57,7 +60,10 @@
             grid-template-rows: 1fr 4.5fr 1fr;
             grid-template-columns: 1fr;
             hamburger-menu {
-                  @apply inline-block fixed left-2.5 top-2.5 scale-75;
+                  @apply inline-block fixed left-2.5 top-2.5 scale-75 z-30;
+            }
+            .navegation-modal.active {
+                  @apply inline-block fixed size-full z-20;
             }
             navegation {
                   @apply hidden;
