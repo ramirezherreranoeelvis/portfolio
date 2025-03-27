@@ -1,6 +1,31 @@
-<div class="size-full flex justify-center items-center">
-        <div class="panel margin">
-              <p>about-me-template works!</p>
-        </div>
-  </div>
-  
+<div page>
+      <div class="panel">
+            <table>
+                  <thead>
+                        <tr>
+                              <th>Usados:</th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                        @for (resource of resources; track $index) {
+                              <tr>
+                                    <td>
+                                          <a
+                                                [href]="resource.href"
+                                                target="_blank"
+                                          >
+                                                @if (resource.src) {
+                                                      <img
+                                                            [src]="resource.src"
+                                                            [alt]="resource.alt"
+                                                      />
+                                                }
+                                                {{ resource.text }}
+                                          </a>
+                                    </td>
+                              </tr>
+                        }
+                  </tbody>
+            </table>
+      </div>
+</div>
