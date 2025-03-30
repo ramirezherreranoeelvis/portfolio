@@ -26,7 +26,7 @@
       }
       @media (width<1450px) and (height>768px) {
             .panel {
-                  @apply flex-col gap-16 m-auto px-10 py-30 box-content;
+                  @apply flex-col gap-16 m-auto px-10 py-20 box-content;
                   .pfp {
                         @apply max-w-[250px];
                   }
