@@ -9,8 +9,15 @@ import { CardProyectComponent } from '../../molecules/card-proyect/card-proyect.
 })
 export class ProyectsTemplateComponent {
       proyects = [
-            { portada: 'images/proyects/proyecto1.webp', github:"https://github.com/ramirezherreranoeelvis/Colegio" },
-            { portada: 'images/proyects/proyecto2.webp' },
+            {
+                  portada: 'images/proyects/proyecto1.webp',
+                  github: 'https://github.com/ramirezherreranoeelvis/Colegio',
+            },
+            {
+                  portada: 'images/proyects/proyecto2.webp',
+                  github: 'https://github.com/ramirezherreranoeelvis/VirtualSkills',
+                  proyectUrl: 'https://virtual-skills.vercel.app/',
+            },
             { portada: 'images/proyects/proyecto3.webp' },
             { portada: 'images/proyects/proyecto4.webp' },
             { portada: 'images/proyects/proyecto5.webp' },

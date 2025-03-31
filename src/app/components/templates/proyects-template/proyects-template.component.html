@@ -16,7 +16,9 @@
                               <card-proyect
                                     [imgUrl]="proyect.portada"
                                     [githubUrl]="proyect.github"
-                                    [proyectUrl]="proyect.github"
+                                    [proyectUrl]="
+                                          proyect.proyectUrl ?? proyect.github
+                                    "
                               />
                         } @else {
                               <card-proyect [imgUrl]="proyect.portada" />
