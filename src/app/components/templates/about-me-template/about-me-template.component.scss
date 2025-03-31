@@ -2,79 +2,44 @@
 .about {
       @apply size-full flex items-center;
       .panel {
-            @apply flex gap-28 items-center mx-24 px-12 py-14;
+            @apply flex w-[90%] gap-[5%] px-12 py-14 items-center justify-center min-w-[800px];
             .pfp {
-                  @apply w-[382.38px];
+                  @apply w-[30%];
                   img {
                         @apply rounded-full;
                   }
             }
             .text {
-                  @apply font-[CabinSketch] text-4xl w-[589px] text-center;
+                  @apply inline-block font-[CabinSketch] text-4xl w-[70%] text-center;
             }
       }
-      @media (width<=1000px) {
+      @media (width<1330px) {
+            .panel .text {
+                  font-size: 26px;
+            }
+      }
+      @media (width<1090px) {
+            justify-content: center;
             .panel {
-                  @apply flex-col gap-[39px] m-auto max-w-[630px];
-                  .pfp {
-                        @apply max-w-[253px];
-                  }
+                  @apply flex-col w-[90%] gap-[40px] min-w-[100px] h-[90%];
+
                   .text {
-                        @apply text-2xl w-full text-center;
+                        width: 100%;
+                  }
+                  .pfp {
+                        width: 50%;
                   }
             }
       }
-      @media (width<1450px) and (height>768px) {
-            .panel {
-                  @apply flex-col gap-16 m-auto px-10 py-20 box-content;
-                  .pfp {
-                        @apply max-w-[250px];
-                  }
+      @media (width<600px) {
+            .panel .text {
+                  font-size: 22px;
             }
       }
 
-      @media (width<740px) and (height>768px) {
-            .panel {
-                  @apply flex-col gap-7 m-[30px] px-6 py-10;
-                  .pfp {
-                        @apply max-w-[150px];
-                  }
-            }
-      }
-
-      @media (width<768px) {
-            .panel {
-                  @apply flex-col gap-[30px] mx-[40px];
-                  .pfp {
-                        @apply max-w-[200px];
-                  }
-                  .text {
-                        @apply text-xl;
-                  }
-            }
-      }
-
-      @media (width>1000px) and (height<=600px) {
-            .panel {
-                  @apply gap-5 px-3;
-                  .pfp {
-                        @apply max-w-[180px];
-                  }
-                  .text {
-                        @apply text-2xl w-[380px] text-center;
-                  }
-            }
-      }
-
-      @media (width<376px) and (height<741px) {
-            .panel {
-                  @apply flex-col gap-5 mx-[30px] px-6 py-10;
-                  .pfp {
-                        @apply max-w-[140px];
-                  }
-                  .text {
-                        @apply text-lg;
-                  }
+      @media (width<380px) {
+            .panel .text {
+                  font-size: 12px;
             }
       }
 }
