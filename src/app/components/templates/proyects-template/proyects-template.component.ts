@@ -9,11 +9,11 @@ import { CardProyectComponent } from '../../molecules/card-proyect/card-proyect.
 })
 export class ProyectsTemplateComponent {
       proyects = [
-            'images/proyects/proyecto1.webp',
-            'images/proyects/proyecto2.webp',
-            'images/proyects/proyecto3.webp',
-            'images/proyects/proyecto4.webp',
-            'images/proyects/proyecto5.webp',
-            'images/proyects/proyecto6.webp',
+            { portada: 'images/proyects/proyecto1.webp', github:"https://github.com/ramirezherreranoeelvis/Colegio" },
+            { portada: 'images/proyects/proyecto2.webp' },
+            { portada: 'images/proyects/proyecto3.webp' },
+            { portada: 'images/proyects/proyecto4.webp' },
+            { portada: 'images/proyects/proyecto5.webp' },
+            { portada: 'images/proyects/proyecto6.webp' },
       ];
 }

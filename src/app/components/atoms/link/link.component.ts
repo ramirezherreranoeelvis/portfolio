@@ -6,7 +6,9 @@ import { RouterLink } from '@angular/router';
       imports: [RouterLink],
       template: `
             @if (isExternal()) {
-                  <a [href]="href()" [class]="className()">{{ value() }}</a>
+                  <a [href]="href()" target="_blank" [class]="className()">{{
+                        value()
+                  }}</a>
             } @else {
                   <a [routerLink]="href()" [class]="className()">{{
                         value()

@@ -11,8 +11,16 @@
                   <img src="/images/skills/bbdd.webp" alt="mysql" />
             </div>
             <div class="proyects">
-                  @for (img of proyects; track $index) {
-                        <card-proyect [imgUrl]="img" />
+                  @for (proyect of proyects; track $index) {
+                        @if (proyect.github) {
+                              <card-proyect
+                                    [imgUrl]="proyect.portada"
+                                    [githubUrl]="proyect.github"
+                                    [proyectUrl]="proyect.github"
+                              />
+                        } @else {
+                              <card-proyect [imgUrl]="proyect.portada" />
+                        }
                   }
             </div>
       </div>
