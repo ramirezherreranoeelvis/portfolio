@@ -19,7 +19,7 @@ export class ProyectsTemplateComponent {
                   proyectUrl: 'https://virtual-skills.vercel.app/',
             },
             {
-                  portada: 'images/proyects/proyecto3.webp',
+                  portada: 'images/proyects/ecomerce.webp',
                   github: 'https://github.com/ramirezherreranoeelvis/ecomerce-frontend',
                   proyectUrl: 'https://ecomerce-frontend-gato.vercel.app/home',
             },
