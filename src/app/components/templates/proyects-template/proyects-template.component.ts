@@ -14,7 +14,7 @@ export class ProyectsTemplateComponent {
                   github: 'https://github.com/ramirezherreranoeelvis/Colegio',
             },
             {
-                  portada: 'images/proyects/proyecto2.webp',
+                  portada: 'images/proyects/skill-connect.webp',
                   github: 'https://github.com/ramirezherreranoeelvis/VirtualSkills',
                   proyectUrl: 'https://virtual-skills.vercel.app/',
             },
