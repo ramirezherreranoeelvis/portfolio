@@ -12,4 +12,13 @@
                   @apply text-[50px];
             }
       }
+
+      @media (width<440px) {
+            @apply gap-[44px];
+            a {
+                  i {
+                        @apply text-[40px];
+                  }
+            }
+      }
 }

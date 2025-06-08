@@ -1,5 +1,5 @@
 .panel {
-      @apply flex flex-col max-w-[1363px] max-h-[628px] overflow-y-auto py-[40px] gap-[30px];
+      @apply flex flex-col max-w-[1363px] max-h-[628px] h-[80%] overflow-y-auto py-[40px] gap-[30px];
 }
 .options {
       @apply relative flex justify-center;
@@ -30,6 +30,12 @@
                   @apply w-[288px] h-[140px];
             }
       }
+       @media (width<440px) {
+            @apply gap-x-[80px] gap-y-[40px];
+            card-proyect {
+                  @apply w-[200px] h-[100px];
+            }
+      }
 }
 
 img {
@@ -37,5 +43,14 @@ img {
       @apply h-[71px];
       @media (width<1000px) {
             @apply h-[61px];
+      }
+      @media (width<1000px) {
+            @apply h-[61px];
+      }
+      @media (width<500px) {
+            @apply h-[40px];
+      }
+      @media (width<350px) {
+            @apply h-[30px];
       }
 }
