@@ -1,0 +1,12 @@
+.contacto {
+      background-image: radial-gradient(
+                  at 88% 40%,
+                  #151030 0px,
+                  transparent 85%
+            ),
+            radial-gradient(at 49% 30%, #1e1745 0px, transparent 65%),
+            radial-gradient(at 14% 26%, #14141a 0px, transparent 65%),
+            radial-gradient(at 0% 64%, #310c69 0px, transparent 65%),
+            radial-gradient(at 41% 94%, #000c48 0px, transparent 65%),
+            radial-gradient(at 100% 99%, #b40069 0px, transparent 65%);
+}

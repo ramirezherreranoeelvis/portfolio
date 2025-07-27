@@ -1,9 +1,0 @@
-@import "tailwindcss";
-.menu {
-      @apply flex flex-col items-start gap-[22px];
-      @apply absolute p-[12px_8px] w-[100px] h-[98px] bg-[#8f91ff0d] rounded-lg;
-
-      &__line {
-            @apply w-21 h-2.5 bg-[#5500ff] rounded-sm flex-none order-1 self-stretch grow-0 origin-left;
-      }
-}
