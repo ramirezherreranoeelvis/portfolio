@@ -18,15 +18,6 @@ const App = () => {
                     <Hero />
                 </div>
                 <div className="absolute bg-gradient w-full h-[calc(100%-100vh)] z-0"></div>
-                {/* <div className="relative z-0 contacto">
-                    <About />
-                    <Tech />
-                    <Works />
-                    <div className="relative z-0" contacto>
-                        <Contact />
-                    </div>
-                    
-                </div> */}
                 <Suspense
                     fallback={
                         <div className="w-full h-screen flex justify-center items-center text-white">
@@ -37,7 +28,7 @@ const App = () => {
                     <div className="relative z-0 contacto">
                         <InView triggerOnce threshold={0.2}>
                             {({ inView, ref }) => (
-                                <div ref={ref}>
+                                <div id="about" ref={ref}>
                                     {/* El componente solo se renderiza (y descarga) cuando inView es true */}
                                     {inView ? (
                                         <About />
@@ -56,7 +47,7 @@ const App = () => {
                         </InView>
                         <InView triggerOnce threshold={0.2}>
                             {({ inView, ref }) => (
-                                <div ref={ref}>
+                                <div id="works" ref={ref}>
                                     {inView ? (
                                         <Works />
                                     ) : (
@@ -68,7 +59,7 @@ const App = () => {
                         <div className="relative z-0">
                             <InView triggerOnce threshold={0.2}>
                                 {({ inView, ref }) => (
-                                    <div ref={ref}>
+                                    <div id="contact" ref={ref}>
                                         {inView ? (
                                             <>
                                                 <Contact />
