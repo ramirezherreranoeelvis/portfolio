@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Tilt from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { fadeIn } from "../../../utils/motion";
 import AtomText from "../../atoms/text/Text";
 const CardProject = ({ index, name, description, tags, image, source_code_link }) => {
