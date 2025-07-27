@@ -1,11 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import { InView } from "react-intersection-observer";
 import Navbar from "./components/organims/Navbar";
 import Hero from "./components/organims/Hero";
-import About from "./components/organims/About/About";
-import Contact from "./components/organims/Contact/Contact";
-import Tech from "./components/organims/Tech/Tech";
-import Works from "./components/organims/Works";
-import StarsCanvas from "./components/canvas/Stars";
+const About = lazy(() => import("./components/organims/About/About"));
+const Tech = lazy(() => import("./components/organims/Tech/Tech"));
+const Works = lazy(() => import("./components/organims/Works"));
+const Contact = lazy(() => import("./components/organims/Contact/Contact"));
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 import "./components/organims/Contact/style.css";
 const App = () => {
     return (
@@ -16,18 +18,71 @@ const App = () => {
                     <Hero />
                 </div>
                 <div className="absolute bg-gradient w-full h-[calc(100%-100vh)] z-0"></div>
-                <div className="relative z-0 contacto">
-                   
+                {/* <div className="relative z-0 contacto">
                     <About />
-                    {/* <Experience /> */}
                     <Tech />
                     <Works />
-                    {/* <Feedbacks /> */}
                     <div className="relative z-0" contacto>
                         <Contact />
                     </div>
-                     <StarsCanvas />
-                </div>
+                    
+                </div> */}
+                <Suspense
+                    fallback={
+                        <div className="w-full h-screen flex justify-center items-center text-white">
+                            Cargando sección...
+                        </div>
+                    }
+                >
+                    <div className="relative z-0 contacto">
+                        <InView triggerOnce threshold={0.2}>
+                            {({ inView, ref }) => (
+                                <div ref={ref}>
+                                    {/* El componente solo se renderiza (y descarga) cuando inView es true */}
+                                    {inView ? (
+                                        <About />
+                                    ) : (
+                                        <div className="min-h-screen" />
+                                    )}
+                                </div>
+                            )}
+                        </InView>
+                        <InView triggerOnce threshold={0.2}>
+                            {({ inView, ref }) => (
+                                <div ref={ref}>
+                                    {inView ? <Tech /> : <div className="min-h-screen" />}
+                                </div>
+                            )}
+                        </InView>
+                        <InView triggerOnce threshold={0.2}>
+                            {({ inView, ref }) => (
+                                <div ref={ref}>
+                                    {inView ? (
+                                        <Works />
+                                    ) : (
+                                        <div className="min-h-screen" />
+                                    )}
+                                </div>
+                            )}
+                        </InView>
+                        <div className="relative z-0">
+                            <InView triggerOnce threshold={0.2}>
+                                {({ inView, ref }) => (
+                                    <div ref={ref}>
+                                        {inView ? (
+                                            <>
+                                                <Contact />
+                                            </>
+                                        ) : (
+                                            <div className="min-h-screen" />
+                                        )}
+                                    </div>
+                                )}
+                            </InView>
+                        </div>
+                        <StarsCanvas />
+                    </div>
+                </Suspense>
             </div>
         </BrowserRouter>
     );
