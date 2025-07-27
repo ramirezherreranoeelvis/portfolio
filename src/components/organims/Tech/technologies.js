@@ -40,10 +40,6 @@ const technologies = [
             icon: "images/tech/sql-server.png",
       },
       {
-            name: 'Three JS',
-            icon: "images/tech/threejs.svg",
-      },
-      {
             name: 'scss',
             icon: "images/tech/scss.png",
       },
