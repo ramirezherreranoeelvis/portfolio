@@ -64,7 +64,7 @@ const Contact = () => {
             <div className="flex-[0.75] flex">
                 <motion.div
                     variants={slideIn("left", "tween", 0.2, 1)}
-                    className="base flex-1 max-[365px]:max-w-[200px] overflow-x-hidden bg-black-100 p-8 rounded-2xl"
+                    className="base flex-1 max-[365px]:max-w-[350px] overflow-x-hidden bg-black-100 p-8 rounded-2xl"
                 >
                     <AtomText
                         tag="p"
