@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import { fadeIn } from "../../../utils/motion";
 import AtomText from "../../atoms/text/Text";
+import "./style.css"
 const CardProject = ({ index, name, description, tags, image, source_code_link }) => {
     return (
         <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>

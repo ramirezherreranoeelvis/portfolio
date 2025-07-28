@@ -4,7 +4,7 @@ import { styles } from "../../styles";
 import { SectionWrapper } from "../../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { testimonials } from "./Testimonials/testimonials";
-
+import "./style.css";
 const FeedbackCard = ({ index, testimonial, name, designation, company, image }) => (
     <motion.div
         variants={fadeIn("", "spring", index * 0.5, 0.75)}

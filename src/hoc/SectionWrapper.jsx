@@ -13,7 +13,7 @@ const StarWrapper = (Component) =>
         viewport={{ once: true, amount: 0.25 }}
         className={`${styles.padding} mx-auto relative z-0`}
       >
-        <span className='hash-span'>
+        <span className='-mt-[100px] pb-[100px] block'>
           &nbsp;
         </span>
 
