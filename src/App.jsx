@@ -9,6 +9,53 @@ const Works = lazy(() => import("./components/organims/Works"));
 const Contact = lazy(() => import("./components/organims/Contact/Contact"));
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 import "./components/organims/Contact/style.css";
+
+const Content = () => {
+    return (
+        <>
+            {" "}
+            <InView triggerOnce threshold={0.2}>
+                {({ inView, ref }) => (
+                    <div id="about" ref={ref}>
+                        {/* El componente solo se renderiza (y descarga) cuando inView es true */}
+                        {inView ? <About /> : <div className="min-h-screen" />}
+                    </div>
+                )}
+            </InView>
+            <InView triggerOnce threshold={0.2}>
+                {({ inView, ref }) => (
+                    <div ref={ref}>
+                        {inView ? <Tech /> : <div className="min-h-28" />}
+                    </div>
+                )}
+            </InView>
+            <InView triggerOnce threshold={0.2}>
+                {({ inView, ref }) => (
+                    <div id="works" ref={ref}>
+                        {inView ? <Works /> : <div className="min-h-screen" />}
+                    </div>
+                )}
+            </InView>
+            <div className="relative z-0">
+                <InView triggerOnce threshold={0.2}>
+                    {({ inView, ref }) => (
+                        <div id="contact" ref={ref}>
+                            {inView ? (
+                                <>
+                                    <Contact />
+                                </>
+                            ) : (
+                                <div className="min-h-screen" />
+                            )}
+                        </div>
+                    )}
+                </InView>
+            </div>
+            <StarsCanvas />
+        </>
+    );
+};
+
 const App = () => {
     return (
         <BrowserRouter>
@@ -25,54 +72,16 @@ const App = () => {
                         </div>
                     }
                 >
-                    <div className="relative z-0 contacto max-w-[100vw] overflow-y-visible overflow-x-hidden">
-                        <InView triggerOnce threshold={0.2}>
-                            {({ inView, ref }) => (
-                                <div id="about" ref={ref}>
-                                    {/* El componente solo se renderiza (y descarga) cuando inView es true */}
-                                    {inView ? (
-                                        <About />
-                                    ) : (
-                                        <div className="min-h-screen" />
-                                    )}
-                                </div>
-                            )}
-                        </InView>
-                        <InView triggerOnce threshold={0.2}>
-                            {({ inView, ref }) => (
-                                <div ref={ref}>
-                                    {inView ? <Tech /> : <div className="min-h-28" />}
-                                </div>
-                            )}
-                        </InView>
-                        <InView triggerOnce threshold={0.2}>
-                            {({ inView, ref }) => (
-                                <div id="works" ref={ref}>
-                                    {inView ? (
-                                        <Works />
-                                    ) : (
-                                        <div className="min-h-screen" />
-                                    )}
-                                </div>
-                            )}
-                        </InView>
-                        <div className="relative z-0">
-                            <InView triggerOnce threshold={0.2}>
-                                {({ inView, ref }) => (
-                                    <div id="contact" ref={ref}>
-                                        {inView ? (
-                                            <>
-                                                <Contact />
-                                            </>
-                                        ) : (
-                                            <div className="min-h-screen" />
-                                        )}
-                                    </div>
-                                )}
-                            </InView>
-                        </div>
-                        <StarsCanvas />
-                    </div>
+                    <InView triggerOnce threshold={0.2}>
+                        {({ inView, ref }) => (
+                            <div
+                                ref={ref}
+                                className="relative z-0 contacto max-w-[100vw] overflow-y-visible overflow-x-hidden"
+                            >
+                                {inView ? <Content /> : <div className="min-h-screen" />}
+                            </div>
+                        )}
+                    </InView>
                 </Suspense>
             </div>
         </BrowserRouter>
