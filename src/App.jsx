@@ -71,7 +71,7 @@ const App = () => {
                                 )}
                             </InView>
                         </div>
-                        {/* <StarsCanvas /> */}
+                        <StarsCanvas />
                     </div>
                 </Suspense>
             </div>
