@@ -25,7 +25,7 @@ const App = () => {
                         </div>
                     }
                 >
-                    <div className="relative z-0 contacto">
+                    <div className="relative z-0 contacto max-w-[100vw] overflow-y-visible overflow-x-hidden">
                         <InView triggerOnce threshold={0.2}>
                             {({ inView, ref }) => (
                                 <div id="about" ref={ref}>

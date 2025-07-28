@@ -5,7 +5,7 @@ import projects from "./works/projects";
 import { fadeIn, textVariant } from "../../utils/motion";
 import AtomText from "../atoms/text/Text";
 import CardProject from "../molecules/CardProject/CardProject";
-import "./works/works.css"
+import "./works/works.css";
 const Works = () => {
     return (
         <section works="" className="relative">
@@ -50,4 +50,4 @@ const Works = () => {
     );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works);

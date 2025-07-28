@@ -30,7 +30,15 @@ const Hero = () => {
                     </AtomText>
                 </div>
             </div>
-            <ComputersCanvas />
+            <div
+                className="absolute w-full h-screen 
+                    max-[1100px]:h-[700px] max-[1100px]:bottom-16
+                    max-[1100px]:h-[700px]
+                    max-[460px]:h-[500px] max-[500px]:bottom-44
+                "
+            >
+                <ComputersCanvas />
+            </div>
         </section>
     );
 };
