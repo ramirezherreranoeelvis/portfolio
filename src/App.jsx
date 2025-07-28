@@ -16,8 +16,7 @@ const Content = () => {
             {" "}
             <InView triggerOnce threshold={0.2}>
                 {({ inView, ref }) => (
-                    <div id="about" ref={ref}>
-                        {/* El componente solo se renderiza (y descarga) cuando inView es true */}
+                    <div id="about" className="flex justify-center" ref={ref}>
                         {inView ? <About /> : <div className="min-h-screen" />}
                     </div>
                 )}
@@ -31,7 +30,7 @@ const Content = () => {
             </InView>
             <InView triggerOnce threshold={0.2}>
                 {({ inView, ref }) => (
-                    <div id="works" ref={ref}>
+                    <div id="works" className="flex justify-center" ref={ref}>
                         {inView ? <Works /> : <div className="min-h-screen" />}
                     </div>
                 )}
@@ -72,6 +71,7 @@ const App = () => {
                         </div>
                     }
                 >
+
                     <InView triggerOnce threshold={0.2}>
                         {({ inView, ref }) => (
                             <div

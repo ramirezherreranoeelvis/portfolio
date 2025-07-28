@@ -1,8 +1,9 @@
 import { Canvas } from "@react-three/fiber";
 import { Preload } from "@react-three/drei";
 import Ball from "../../canvas/Ball.jsx";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Suspense } from "react";
 import { technologies, layouts } from "./technologies.js";
+import CanvasLoader from "../../Loader.jsx";
 const useScreenSize = () => {
     const [screenSize, setScreenSize] = useState("normal");
     useEffect(() => {
@@ -45,23 +46,25 @@ const Tech = () => {
                 orthographic
                 camera={{ zoom: currentLayout.zoom, position: [0, 0, 10] }}
             >
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[10, 10, 5]} intensity={1} />
+                <Suspense fallback={<CanvasLoader />}>
+                    <ambientLight intensity={0.5} />
+                    <directionalLight position={[10, 10, 5]} intensity={1} />
 
-                {technologies.map((tech, index) => {
-                    // Asegúrate de que hay una posición definida para este índice
-                    const position = currentLayout.positions[index];
-                    if (!position) return null; // No renderizar si no hay posición
+                    {technologies.map((tech, index) => {
+                        // Asegúrate de que hay una posición definida para este índice
+                        const position = currentLayout.positions[index];
+                        if (!position) return null; // No renderizar si no hay posición
 
-                    return (
-                        <Ball
-                            key={tech.name}
-                            position={position}
-                            imgUrl={tech.icon}
-                            color="#f8f8f8"
-                        />
-                    );
-                })}
+                        return (
+                            <Ball
+                                key={tech.name}
+                                position={position}
+                                imgUrl={tech.icon}
+                                color="#f8f8f8"
+                            />
+                        );
+                    })}
+                </Suspense>
                 <Preload all />
             </Canvas>
         </div>
