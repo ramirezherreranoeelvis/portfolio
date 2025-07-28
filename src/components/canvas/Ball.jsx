@@ -1,47 +1,34 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
+import { useDrag } from "@use-gesture/react";
+import { animated, useSpring } from "@react-spring/three";
+import { useTexture, Decal } from "@react-three/drei";
+const Ball = ({ imgUrl, position, color }) => {
+    const [decal] = useTexture([imgUrl]);
 
-import CanvasLoader from "../Loader";
+    const [{ rotation }, api] = useSpring(() => ({
+        rotation: [0, 0, 0],
+        config: { mass: 1, tension: 200, friction: 20 },
+    }));
 
-const Ball = (props) => {
-    const [decal] = useTexture([props.imgUrl]);
+    const bind = useDrag(({ down, movement: [mx, my] }) => {
+        api.start({
+            rotation: down ? [my / 150, mx / 150, 0] : rotation.get(),
+        });
+    });
 
     return (
-        <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-            <ambientLight intensity={0.25} />
-            <directionalLight position={[0, 0, 0.05]} />
-            <mesh castShadow receiveShadow scale={2.75}>
-                <icosahedronGeometry args={[1, 1]} />
-                <meshStandardMaterial
-                    color="#f8f8f8"
-                    polygonOffset
-                    polygonOffsetFactor={-5}
-                    flatShading
-                />
+        <animated.mesh {...bind()} position={position} rotation={rotation} scale={2.5}>
+            <icosahedronGeometry args={[1, 1]} />
+            <meshStandardMaterial color={color} polygonOffset polygonOffsetFactor={-5} />
+            {decal && (
                 <Decal
                     position={[0, 0, 1]}
                     rotation={[2 * Math.PI, 0, 6.25]}
-                    scale={1}
+                    scale={1.4}
                     map={decal}
-                    flatShading
                 />
-            </mesh>
-        </Float>
+            )}
+        </animated.mesh>
     );
 };
 
-const BallCanvas = ({ icon }) => {
-    return (
-        <Canvas frameloop="demand" dpr={[1, 2]} gl={{ preserveDrawingBuffer: false }}>
-            <Suspense fallback={<CanvasLoader />}>
-                <OrbitControls enableZoom={false} />
-                <Ball imgUrl={icon} />
-            </Suspense>
-
-            <Preload all />
-        </Canvas>
-    );
-};
-
-export default BallCanvas;
+export default Ball;

@@ -41,7 +41,7 @@ const App = () => {
                         <InView triggerOnce threshold={0.2}>
                             {({ inView, ref }) => (
                                 <div ref={ref}>
-                                    {inView ? <Tech /> : <div className="min-h-screen" />}
+                                    {inView ? <Tech /> : <div className="min-h-28" />}
                                 </div>
                             )}
                         </InView>
@@ -71,7 +71,7 @@ const App = () => {
                                 )}
                             </InView>
                         </div>
-                        <StarsCanvas />
+                        {/* <StarsCanvas /> */}
                     </div>
                 </Suspense>
             </div>

@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../../styles";
-import { navLinks } from "../../constants";
-import { logo, menu, close } from "../../assets";
+import { links } from "../organims/Navbar/links";
 
 const Navbar = () => {
     const [active, setActive] = useState("");
@@ -43,7 +42,7 @@ const Navbar = () => {
                     }}
                 >
                     <img
-                        src={logo}
+                        src="images/logo.webp"
                         alt="logo"
                         className="w-9 h-9 object-contain rounded-full"
                     />
@@ -57,7 +56,7 @@ const Navbar = () => {
                 </Link>
 
                 <ul className="list-none hidden sm:flex flex-row gap-10">
-                    {navLinks.map((nav) => (
+                    {links.map((nav) => (
                         <li
                             key={nav.id}
                             className={`${
@@ -72,7 +71,7 @@ const Navbar = () => {
 
                 <div className="sm:hidden flex flex-1 justify-end items-center">
                     <img
-                        src={toggle ? close : menu}
+                        src={toggle ? "images/close.svg" : "images/menu.svg"}
                         alt="menu"
                         className="w-[28px] h-[28px] object-contain"
                         onClick={() => setToggle(!toggle)}
@@ -84,7 +83,7 @@ const Navbar = () => {
                         } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
                     >
                         <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-                            {navLinks.map((nav) => (
+                            {links.map((nav) => (
                                 <li
                                     key={nav.id}
                                     className={`font-poppins font-medium cursor-pointer text-[16px] ${

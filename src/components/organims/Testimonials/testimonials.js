@@ -1,32 +1,4 @@
-export const navLinks = [
-      {
-            id: 'about',
-            title: 'About',
-      },
-      {
-            id: 'works',
-            title: 'Works',
-      },
-      {
-            id: 'contact',
-            title: 'Contact',
-      },
-];
-
-
-
-const experiences = [
-      {
-            title: 'titulo',
-            company_name: 'company',
-            icon: "",
-            iconBg: '#383E56',
-            date: 'fecha',
-            points: ['aporte'],
-      },
-];
-
-const testimonials = [
+export const testimonials = [
       {
             testimonial:
                   'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
@@ -52,7 +24,3 @@ const testimonials = [
             image: 'https://randomuser.me/api/portraits/women/6.jpg',
       },
 ];
-
-
-
-export { experiences, testimonials };
