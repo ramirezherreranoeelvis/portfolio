@@ -51,7 +51,7 @@ const Content = () => {
                     )}
                 </InView>
             </div>
-            {/* <StarsCanvas /> */}
+            <StarsCanvas />
         </>
     );
 };
