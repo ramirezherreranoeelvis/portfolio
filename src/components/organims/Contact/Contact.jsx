@@ -59,12 +59,12 @@ const Contact = () => {
     };
     return (
         <div
-            className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+            className={` xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
         >
             <div className="flex-[0.75] flex">
                 <motion.div
                     variants={slideIn("left", "tween", 0.2, 1)}
-                    className="base flex-1 bg-black-100 p-8 rounded-2xl"
+                    className="base flex-1 max-[365px]:max-w-[200px] overflow-x-hidden bg-black-100 p-8 rounded-2xl"
                 >
                     <AtomText
                         tag="p"
@@ -112,7 +112,8 @@ const Contact = () => {
                                 value={form.message} // <-- Añade el value
                                 onChange={handleChange} // <-- Añade el onChange
                                 placeholder="¿Cuál es tu mensaje?"
-                                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium
+                                max-[365px]:w-full"
                             />
                         </label>
 
