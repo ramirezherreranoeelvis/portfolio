@@ -13,7 +13,7 @@ import "./components/organims/Contact/style.css";
 const App = () => {
     return (
         <BrowserRouter>
-            <div className="relative bg-primary bg-hero-pattern bg-no-repeat bg-cover">
+            <div className="relative bgs-primary bg-ahero-pattern bg-no-repeat bg-cover">
                 <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center z-30">
                     <Navbar />
                     <Hero />

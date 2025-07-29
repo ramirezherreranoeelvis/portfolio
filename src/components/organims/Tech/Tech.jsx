@@ -4,6 +4,7 @@ import Ball from "../../canvas/Ball.jsx";
 import { useState, useEffect, useMemo, Suspense } from "react";
 import { technologies, layouts } from "./technologies.js";
 import CanvasLoader from "../../Loader.jsx";
+import "./balls.css"
 const useScreenSize = () => {
     const [screenSize, setScreenSize] = useState("normal");
     useEffect(() => {
@@ -41,8 +42,11 @@ const Tech = () => {
     return (
         <div className={"w-screen"}>
             <Canvas
+                className="ball-tech-purple-cyan"
                 gl={{ preserveDrawingBuffer: true }}
-                style={{ height: currentLayout.canvasHeight }}
+                style={{
+                    height: currentLayout.canvasHeight,
+                }}
                 orthographic
                 camera={{ zoom: currentLayout.zoom, position: [0, 0, 10] }}
             >
@@ -60,7 +64,7 @@ const Tech = () => {
                                 key={tech.name}
                                 position={position}
                                 imgUrl={tech.icon}
-                                color="#f8f8f8"
+                                color="#150C38"
                             />
                         );
                     })}

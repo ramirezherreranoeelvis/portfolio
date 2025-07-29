@@ -17,13 +17,13 @@ const Ball = ({ imgUrl, position, color }) => {
 
     return (
         <animated.mesh {...bind()} position={position} rotation={rotation} scale={2.5}>
-            <icosahedronGeometry args={[1, 1]} />
+            <icosahedronGeometry args={[1.2, 10]} />
             <meshStandardMaterial color={color} polygonOffset polygonOffsetFactor={-5} />
             {decal && (
                 <Decal
                     position={[0, 0, 1]}
                     rotation={[2 * Math.PI, 0, 6.25]}
-                    scale={1.4}
+                    scale={1.6}
                     map={decal}
                 />
             )}
