@@ -6,7 +6,7 @@ import { InView } from "react-intersection-observer";
 const Stars = (props) => {
     const ref = useRef();
     const [sphere] = useState(() =>
-        random.inSphere(new Float32Array(5000), { radius: 1.2 })
+        random.inSphere(new Float32Array(100), { radius: 1.2 }),
     );
 
     useFrame((state, delta) => {
@@ -31,23 +31,25 @@ const Stars = (props) => {
 
 const StarsCanvas = () => {
     return (
-        <InView triggerOnce threshold={0.2}>
-            {({ inView, ref }) => (
-                <div className="w-full h-auto absolute inset-0 z-[-1]" ref={ref}>
-                    {inView ? (
-                        <Canvas camera={{ position: [0, 0, 1] }}>
-                            <Suspense fallback={null}>
-                                <Stars />
-                            </Suspense>
+        <>
+            <InView triggerOnce threshold={0.2}>
+                {({ inView, ref }) => (
+                    <div className="w-full h-auto absolute inset-0 z-[-1]" ref={ref}>
+                        {inView ? (
+                            <Canvas camera={{ position: [0, 0, 1] }}>
+                                <Suspense fallback={null}>
+                                    <Stars />
+                                </Suspense>
 
-                            <Preload all />
-                        </Canvas>
-                    ) : (
-                        <div className="min-h-screen" />
-                    )}
-                </div>
-            )}
-        </InView>
+                                <Preload all />
+                            </Canvas>
+                        ) : (
+                            <div className="min-h-screen" />
+                        )}
+                    </div>
+                )}
+            </InView>
+        </>
     );
 };
 

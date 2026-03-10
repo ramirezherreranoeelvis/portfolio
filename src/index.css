@@ -12,16 +12,14 @@
       scroll-behavior: smooth;
       color-scheme: dark;
 }
-.bg-gradient {
-      background: radial-gradient(#110b24de, #040014de);
-}
-.bg-hero-pattern {
-      background-image: url("https://github.com/ramirezherreranoeelvis/images/blob/master/herobg.png?raw=true");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-}
+
 body {
+      background-color: #010109;
+      background-image: radial-gradient(
+            circle at 50% 50%,
+            #110722 0%,
+            #010109 80%
+      );
       max-width: 100vw;
       overflow-x: hidden;
       &::-webkit-scrollbar {

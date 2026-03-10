@@ -1,0 +1,573 @@
+.background {
+      position: absolute;
+      overflow-x: clip;
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+      z-index: -1;
+}
+/* .stars {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow:
+            5vw 15vh 1px #fff,
+            12vw 8vh 0px #aaa,
+            25vw 25vh 1px #fff,
+            38vw 5vh 0px #888,
+            45vw 18vh 1px #fff,
+            60vw 10vh 0px #ccc,
+            75vw 2vh 1px #fff,
+            85vw 22vh 0px #777,
+            95vw 12vh 1px #fff,
+            8vw 35vh 0px #fff,
+            20vw 45vh 1px #aaa,
+            35vw 38vh 0px #fff,
+            55vw 42vh 1px #fff,
+            70vw 35vh 0px #ddd,
+            88vw 48vh 1px #fff,
+            15vw 60vh 0px #fff,
+            28vw 75vh 1px #999,
+            42vw 82vh 0px #fff,
+            65vw 65vh 1px #fff,
+            78vw 85vh 0px #bbb,
+            92vw 70vh 1px #fff,
+            50vw 95vh 0px #fff,
+            10vw 90vh 1px #fff,
+            3vw 50vh 0px #ccc,
+            82vw 55vh 1px #fff,
+            62vw 22vh 0px #fff,
+            22vw 88vh 1px #fff,
+            48vw 68vh 0px #fff,
+            72vw 50vh 1px #fff,
+            32vw 15vh 0px #fff,
+            98vw 98vh 1px #fff,
+            5vw 80vh 0px #fff,
+            18vw 28vh 1px #888,
+            52vw 5vh 0px #fff,
+            85vw 38vh 1px #fff,
+            90vw 88vh 0px #ddd,
+            40vw 55vh 1px #fff,
+            58vw 78vh 0px #fff,
+            12vw 42vh 1px #fff,
+            25vw 55vh 0px #fff,
+            88vw 15vh 1px #fff,
+            75vw 75vh 0px #fff,
+            38vw 92vh 1px #fff,
+            68vw 88vh 0px #fff,
+            45vw 28vh 1px #fff,
+            55vw 15vh 0px #fff,
+            15vw 95vh 1px #fff,
+            95vw 45vh 0px #fff;
+      opacity: 0.6;
+} */
+
+.destello-1 {
+      position: absolute;
+      border-radius: 50%;
+      bottom: -7vw;
+      left: -5%;
+      width: 40vw;
+      height: 40vw;
+      background: radial-gradient(
+            circle,
+            #fff 0%,
+            #df4488 5%,
+            rgba(100, 0, 50, 0.4) 30%,
+            transparent 60%
+      );
+      filter: blur(8px);
+}
+.destello-2 {
+      position: absolute;
+      border-radius: 50%;
+      top: -18vw;
+      right: -18vw;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(
+            circle,
+            #fff 0%,
+            #df4488 5%,
+            rgba(150, 0, 80, 0.3) 25%,
+            transparent 65%
+      );
+      filter: blur(10px);
+}
+.artifact {
+      position: absolute;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 6;
+}
+.orb-large-1 {
+      top: 70%;
+      left: 30%;
+      width: 25vw;
+      height: 25vw;
+      background: radial-gradient(
+            circle,
+            rgba(200, 50, 150, 0.08) 0%,
+            rgba(150, 30, 100, 0.15) 50%,
+            transparent 70%
+      );
+      border: 1px solid rgba(255, 100, 200, 0.05);
+      filter: blur(2px);
+}
+
+.orb-large-2 {
+      top: 65%;
+      left: 38%;
+      width: 18vw;
+      height: 18vw;
+      background: radial-gradient(
+            circle,
+            rgba(180, 40, 180, 0.05) 0%,
+            rgba(120, 20, 150, 0.1) 60%,
+            transparent 80%
+      );
+      filter: blur(4px);
+}
+
+.orb-large-3 {
+      top: 30%;
+      left: 70%;
+      width: 20vw;
+      height: 20vw;
+      background: radial-gradient(
+            circle,
+            transparent 40%,
+            rgba(200, 50, 150, 0.15) 60%,
+            transparent 75%
+      );
+      border: 1px solid rgba(255, 150, 200, 0.1);
+}
+
+.orb-medium-1 {
+      top: 25%;
+      left: 75%;
+      width: 12vw;
+      height: 12vw;
+      background: radial-gradient(
+            circle,
+            rgba(255, 100, 180, 0.1) 0%,
+            rgba(200, 50, 150, 0.2) 60%,
+            transparent 80%
+      );
+      filter: blur(1px);
+}
+
+.orb-medium-2 {
+      top: 18%;
+      left: 82%;
+      width: 8vw;
+      height: 8vw;
+      background: radial-gradient(
+            circle,
+            rgba(255, 80, 150, 0.1) 0%,
+            rgba(220, 40, 120, 0.15) 50%,
+            transparent 70%
+      );
+}
+.absolute-center > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
+
+.rayo-h {
+      width: 100vw;
+      height: 2px;
+      background: radial-gradient(
+            ellipse at center,
+            #ffffff 0%,
+            #dda6ff 15%,
+            #8a2be2 40%,
+            transparent 75%
+      );
+      z-index: 4;
+}
+
+.resplandor-h {
+      width: 130vw;
+      height: 45px;
+      background: radial-gradient(
+            ellipse at center,
+            #663cff80 10%,
+            #e1b1ff 20%,
+            #663cff80 30%,
+            transparent 65%
+      );
+      filter: blur(14px);
+      z-index: 3;
+}
+
+.rayo-v {
+      width: 2px;
+      height: 55vh;
+      background: radial-gradient(
+            ellipse at center,
+            #ffffff 0%,
+            #dda6ff 15%,
+            #c78cff3f 40%,
+            transparent 75%
+      );
+      z-index: 4;
+}
+
+.resplandor-v {
+      width: 45px;
+      height: 75vh;
+      background: radial-gradient(
+            ellipse at center,
+            #e1b1ff 0%,
+            #c78cff3f 25%,
+            transparent 65%
+      );
+      filter: blur(14px);
+      z-index: 3;
+}
+.nucleo-4 {
+      width: 70vw;
+      height: 70vw;
+      background: radial-gradient(
+            circle,
+            rgba(64, 50, 255, 0.2) 0%,
+            rgba(56, 4, 161, 0.639) 40%,
+            transparent 70%
+      );
+      filter: blur(200px);
+      @media screen and (width<1000px) {
+            background: radial-gradient(
+                  circle,
+                  rgba(64, 50, 255, 0.2) 0%,
+                  rgba(80, 8, 222, 0.83) 40%,
+                  transparent 70%
+            );
+      }
+
+      z-index: 1;
+}
+.nucleo-3 {
+      width: 40vw;
+      height: 40vw;
+      background: radial-gradient(
+            circle,
+            #f4afffdc 0%,
+            #a228ff2e 40%,
+            transparent 70%
+      );
+      filter: blur(30px);
+      z-index: 2;
+}
+.nucleo-2 {
+      width: 50px;
+      height: 50px;
+      background: #ffffff;
+      border-radius: 50%;
+      filter: blur(8px);
+      z-index: 4;
+}
+.nucleo-1 {
+      width: 22px;
+      height: 22px;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow:
+            0 0 10px 4px #ffffff,
+            0 0 30px 12px #f0caff,
+            0 0 70px 30px #a14dfa;
+      filter: blur(4px);
+      z-index: 5;
+}
+.spacio {
+      height: 400vh;
+}
+@keyframes fadeIntro {
+      0% {
+            opacity: 0;
+            filter: brightness(0);
+      }
+      100% {
+            opacity: 1;
+            filter: brightness(1);
+      }
+}
+.background {
+      animation: fadeIntro 2.5s ease-out forwards;
+}
+
+/* 3. Las estrellas titilan suavemente */
+@keyframes twinkle {
+      0%,
+      100% {
+            opacity: 0.6;
+      }
+      50% {
+            opacity: 0.2;
+      }
+}
+.stars {
+      animation: twinkle 6s infinite ease-in-out;
+}
+
+/* 4. Resplandor de las esquinas respirando (Escala y Opacidad) */
+@keyframes pulseFlares {
+      0%,
+      100% {
+            opacity: 0.8;
+            transform: scale(1);
+      }
+      50% {
+            opacity: 1;
+            transform: scale(1.05);
+      }
+}
+.destello-1 {
+      animation: pulseFlares 8s infinite ease-in-out alternate;
+}
+.destello-2 {
+      animation: pulseFlares 10s infinite ease-in-out alternate-reverse;
+}
+
+/* 5. Artefactos del lente (Orbes difusos) flotando de forma natural */
+/* Nota: Mantenemos el translate(-50%, -50%) de tu clase .artifact para no romper la posición */
+@keyframes floatLens {
+      0%,
+      100% {
+            transform: translate(-50%, -50%) translate(0, 0);
+      }
+      33% {
+            transform: translate(-50%, -50%) translate(15px, -10px);
+      }
+      66% {
+            transform: translate(-50%, -50%) translate(-10px, 15px);
+      }
+}
+/* Tiempos distintos para que no se muevan como robots */
+.orb-large-1 {
+      animation: floatLens 12s infinite ease-in-out;
+}
+.orb-large-2 {
+      animation: floatLens 16s infinite ease-in-out reverse;
+}
+.orb-large-3 {
+      animation: floatLens 14s infinite ease-in-out;
+}
+.orb-medium-1 {
+      animation: floatLens 10s infinite ease-in-out reverse;
+}
+.orb-medium-2 {
+      animation: floatLens 18s infinite ease-in-out;
+}
+
+/* 6. Puntos de luz (dot) deslizándose en diagonal para simular la cámara moviéndose */
+@keyframes slideDots {
+      0%,
+      100% {
+            transform: translate(-50%, -50%) translate(0, 0);
+      }
+      50% {
+            transform: translate(-50%, -50%) translate(20px, -20px);
+      }
+}
+.resplandores-mini > div {
+      animation: slideDots 12s infinite ease-in-out alternate;
+}
+/* Desfasamos los puntitos para crear profundidad */
+.d1,
+.d4,
+.d7 {
+      animation-delay: -2s;
+}
+.d2,
+.d5,
+.d8 {
+      animation-delay: -5s;
+      animation-duration: 15s;
+}
+.d3,
+.d6,
+.d9 {
+      animation-delay: -8s;
+      animation-duration: 9s;
+}
+@keyframes fadeIntro {
+      0% {
+            opacity: 0;
+      }
+      100% {
+            opacity: 1;
+      }
+}
+.background {
+      animation: fadeIntro 2.5s ease-out forwards;
+}
+
+/* =========================================
+         2. SECUENCIA DE EXPLOSIÓN (SUPERNOVA)
+         RESPETANDO LOS BLURS Y EL CENTRADO ORIGINAL
+         ========================================= */
+@keyframes bangCore {
+      0% {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+      }
+      40% {
+            transform: translate(-50%, -50%) scale(1.3);
+            opacity: 1;
+      }
+      100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+      }
+}
+
+@keyframes bangRaysX {
+      0% {
+            transform: translate(-50%, -50%) scaleX(0) scaleY(0.1);
+            opacity: 0;
+      }
+      60% {
+            transform: translate(-50%, -50%) scaleX(1.2) scaleY(1.2);
+            opacity: 1;
+      }
+      100% {
+            transform: translate(-50%, -50%) scaleX(1) scaleY(1);
+            opacity: 1;
+      }
+}
+
+@keyframes bangRaysY {
+      0% {
+            transform: translate(-50%, -50%) scaleY(0) scaleX(0.1);
+            opacity: 0;
+      }
+      60% {
+            transform: translate(-50%, -50%) scaleY(1.2) scaleX(1.2);
+            opacity: 1;
+      }
+      100% {
+            transform: translate(-50%, -50%) scaleY(1) scaleX(1);
+            opacity: 1;
+      }
+}
+
+/* "both" mantiene el elemento invisible antes de que le toque su turno */
+.nucleo-1 {
+      animation: bangCore 0.8s ease-out both;
+}
+.nucleo-2 {
+      animation: bangCore 1s ease-out 0.1s both;
+}
+.nucleo-3 {
+      animation: bangCore 1.3s ease-out 0.2s both;
+}
+.nucleo-4 {
+      animation: bangCore 1.6s ease-out 0.3s both;
+}
+
+.rayo-h,
+.resplandor-h {
+      animation: bangRaysX 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.15s
+            both;
+}
+.rayo-v,
+.resplandor-v {
+      animation: bangRaysY 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.15s
+            both;
+}
+
+/* =========================================
+         3. ESTRELLAS, DESTELLOS Y ORBES (Entorno)
+         ========================================= */
+@keyframes twinkle {
+      0%,
+      100% {
+            opacity: 0.6;
+      }
+      50% {
+            opacity: 0.2;
+      }
+}
+.stars {
+      animation: twinkle 6s infinite ease-in-out;
+}
+
+@keyframes pulseFlares {
+      0%,
+      100% {
+            opacity: 0.8;
+            transform: scale(1);
+      }
+      50% {
+            opacity: 1;
+            transform: scale(1.05);
+      }
+}
+.destello-1 {
+      animation: pulseFlares 8s infinite ease-in-out alternate;
+}
+.destello-2 {
+      animation: pulseFlares 10s infinite ease-in-out alternate-reverse;
+}
+
+@keyframes floatLens {
+      0%,
+      100% {
+            transform: translate(-50%, -50%) translate(0, 0);
+      }
+      33% {
+            transform: translate(-50%, -50%) translate(15px, -10px);
+      }
+      66% {
+            transform: translate(-50%, -50%) translate(-10px, 15px);
+      }
+}
+.orb-large-1 {
+      animation: floatLens 12s infinite ease-in-out;
+}
+.orb-large-2 {
+      animation: floatLens 16s infinite ease-in-out reverse;
+}
+.orb-large-3 {
+      animation: floatLens 14s infinite ease-in-out;
+}
+.orb-medium-1 {
+      animation: floatLens 10s infinite ease-in-out reverse;
+}
+.orb-medium-2 {
+      animation: floatLens 18s infinite ease-in-out;
+}
+
+@keyframes slideDots {
+      0%,
+      100% {
+            transform: translate(-50%, -50%) translate(0, 0);
+      }
+      50% {
+            transform: translate(-50%, -50%) translate(20px, -20px);
+      }
+}
+.resplandores-mini > div {
+      animation: slideDots 12s infinite ease-in-out alternate;
+}
+.d1,
+.d4,
+.d7 {
+      animation-delay: -2s;
+}
+.d2,
+.d5,
+.d8 {
+      animation-delay: -5s;
+      animation-duration: 15s;
+}
+.d3,
+.d6,
+.d9 {
+      animation-delay: -8s;
+      animation-duration: 9s;
+}
