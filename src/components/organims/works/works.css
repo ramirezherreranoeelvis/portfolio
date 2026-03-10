@@ -1,5 +1,5 @@
-[works]{
-.glowing-elements {
+[works] {
+      .glowing-elements {
             position: absolute;
             inset: 0;
             pointer-events: none;
@@ -16,18 +16,27 @@
             height: 200px;
       }
       .glow-2 {
-            background-image: url("https://github.com/ramirezherreranoeelvis/images/blob/master/purple.png?raw=true");
-            background-size: cover;
-
-            width: 400px;
-            height: 400px;
+            background: radial-gradient(
+                  circle,
+                  #fff 0%,
+                  #6f26c3 5%,
+                  rgba(32, 2, 77, 0.4) 30%,
+                  transparent 60%
+            );
+            width: 500px;
+            height: 500px;
             filter: blur(35px) brightness(1.45);
       }
       .glow-3 {
-            background-image: url("https://github.com/ramirezherreranoeelvis/images/blob/master/blue.png?raw=true");
-            background-size: cover;
-            width: 300px;
-            height: 300px;
+            background: radial-gradient(
+                  circle,
+                  #fff 0%,
+                  #3922b9 5%,
+                  rgba(20, 2, 77, 0.4) 30%,
+                  transparent 60%
+            );
+            width: 500px;
+            height: 500px;
             filter: blur(55px) brightness(1.45);
       }
       .glow-1,
@@ -48,7 +57,7 @@
             transform: translateY(-50%);
       }
       .glow-3 {
-            bottom: -40px;
-            left: 30%;
+            bottom: -160px;
+            left: 15%;
       }
 }

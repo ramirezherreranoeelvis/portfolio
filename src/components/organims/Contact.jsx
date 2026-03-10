@@ -2,12 +2,11 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-import { styles } from "../../../styles";
-import { EarthCanvas } from "../../canvas";
-import { SectionWrapper } from "../../../hoc";
-import { slideIn } from "../../../utils/motion";
-import AtomText from "../../atoms/text/Text";
-import "./style.css";
+import { styles } from "../../styles";
+import { EarthCanvas } from "../canvas";
+import { SectionWrapper } from "../../hoc";
+import { slideIn } from "../../utils/motion";
+import AtomText from "../atoms/text/Text";
 const Contact = () => {
     const formRef = useRef();
     const [form, setForm] = useState({
@@ -37,7 +36,7 @@ const Contact = () => {
                     to_email: "ramirezherreranoeelvis@gmail.com",
                     message: form.message,
                 },
-                "ecPK08p2v9ckhW8pY"
+                "ecPK08p2v9ckhW8pY",
             )
             .then(
                 () => {
@@ -54,7 +53,7 @@ const Contact = () => {
                     setLoading(false);
                     console.log(error);
                     alert("Algo salió mal. Por favor, intenta de nuevo.");
-                }
+                },
             );
     };
     return (

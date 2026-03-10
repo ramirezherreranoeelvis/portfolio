@@ -6,9 +6,8 @@ import Hero from "./components/organims/Hero";
 const About = lazy(() => import("./components/organims/About/About"));
 const Tech = lazy(() => import("./components/organims/Tech/Tech"));
 const Works = lazy(() => import("./components/organims/Works"));
-const Contact = lazy(() => import("./components/organims/Contact/Contact"));
+const Contact = lazy(() => import("./components/organims/Contact"));
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
-import "./components/organims/Contact/style.css";
 import Template from "./components/Template";
 
 const App = () => {

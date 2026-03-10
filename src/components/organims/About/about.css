@@ -16,18 +16,28 @@
             height: 200px;
       }
       .glow-2 {
-            background-image: url("https://github.com/ramirezherreranoeelvis/images/blob/master/fuxea.png?raw=true");
-            background-size: cover;
+            background: radial-gradient(
+                  circle,
+                  #fff 0%,
+                  #df4488 5%,
+                  rgba(100, 0, 50, 0.4) 30%,
+                  transparent 60%
+            );
 
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
             filter: blur(35px) brightness(1.45);
       }
       .glow-3 {
-            background-image: url("https://github.com/ramirezherreranoeelvis/images/blob/master/blue.png?raw=true");
-            background-size: cover;
-            width: 300px;
-            height: 300px;
+            background: radial-gradient(
+                  circle,
+                  #fff 0%,
+                  #3338c7 5%,
+                  rgba(23, 0, 100, 0.4) 30%,
+                  transparent 60%
+            );
+            width: 500px;
+            height: 500px;
             filter: blur(55px) brightness(1.45);
       }
       .glow-1,
@@ -48,7 +58,7 @@
             transform: translateY(-50%);
       }
       .glow-3 {
-            bottom: -40px;
-            left: 30%;
+            bottom: -160px;
+            left: 10%;
       }
 }
